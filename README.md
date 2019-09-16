@@ -2,9 +2,9 @@
 BIG Project in conjunction with WebAIM to analyze the technologies and accessibility errors on the top 1 million websites
 
 ### Data Sources
-Initial Million SQL - https://webaim.org/projects/million/MillionSQL.zip
-Initial Million CSV - https://webaim.org/projects/million/MillionCSV.zip
-Follow-up Million SQL - https://webaim.org/projects/million/Million2SQL.zip
+Initial Million SQL - https://webaim.org/projects/million/MillionSQL.zip <br>
+Initial Million CSV - https://webaim.org/projects/million/MillionCSV.zip <br>
+Follow-up Million SQL - https://webaim.org/projects/million/Million2SQL.zip <br> 
 Follow-up Million CSV - https://webaim.org/projects/million/Million2CSV.zip
 
 ### Data Dictionary and Data Notes
