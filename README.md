@@ -31,3 +31,5 @@ to increased errors or error types?
 correlations to explore further?
 - Are there patterns of change between the two datasets that I have overlooked?
 
+### Additional Questions:
+- Does one specific error cause any other errors to be more prevalent?
