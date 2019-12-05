@@ -1,0 +1,2586 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20192.19.0818.2120                               -->
+<workbook source-build='2019.2.3 (20192.19.0818.2120)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <BasicButtonObject />
+    <BasicButtonObjectTextSupport ignorable='true' predowngraded='true' />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='technologies_by_errors' inline='true' name='federated.0zwgwts0gr8itr11mx7ed1d4bvwd' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Error_tech_analysis.csv' name='textscan.09u389i1du2vux1gaekdu01u8y8w'>
+            <connection class='textscan' directory='C:/Users/mckla/Documents/GitHub/WebAIM-Data/Final_Analysis' filename=' errors_tech_analysis.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.09u389i1du2vux1gaekdu01u8y8w' name=' errors_tech_analysis.csv' table='[ errors_tech_analysis#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Technologies' ordinal='1' />
+            <column datatype='string' name='Error Type' ordinal='2' />
+            <column datatype='real' name='Value' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ errors_tech_analysis.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[ errors_tech_analysis.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Technologies</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Technologies]</local-name>
+            <parent-name>[ errors_tech_analysis.csv]</parent-name>
+            <remote-alias>Technologies</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Error Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Error Type]</local-name>
+            <parent-name>[ errors_tech_analysis.csv]</parent-name>
+            <remote-alias>Error Type</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Value]</local-name>
+            <parent-name>[ errors_tech_analysis.csv]</parent-name>
+            <remote-alias>Value</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Top' datatype='integer' name='[Calculation_421086615458598912]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='index()'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[Technologies]' role='dimension' type='nominal' />
+      <column caption='Value ( alerts tech analysis.csv)' datatype='real' name='[Value ( alerts_tech_analysis.csv)]' role='measure' type='quantitative' />
+      <column caption='Value ( features tech analysis.csv)' datatype='real' name='[Value ( features_tech_analysis.csv)]' role='measure' type='quantitative' />
+      <column-instance column='[Technologies]' derivation='None' name='[none:Technologies:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.46856' measure-ordering='alphabetic' measure-percentage='0.53144' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Technologies:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;CMS - 1C-Bitrix&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Frameworks - TweenMax&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Libraries - Slick&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ads - AdRoll&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Frameworks - Backbone.js&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Libraries - Lazy.js&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;WebFrameworks - ZURB Foundation&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Ads - DoubleClick&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Frameworks - Mustache&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Libraries - Moment.js&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CMS - Joomla&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Libraries - Dojo&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Libraries - Zepto&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CMS - Blogger&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Frameworks - Vue.js&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Libraries - SoundManager&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Ads - Prebid&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Frameworks - Prototype&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Libraries - prettyPhoto&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CMS - WordPress&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Libraries - jQuery Migrate&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;WebFrameworks - Laravel&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Ads - AdSense&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Frameworks - Handlebars&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Libraries - Lightbox&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CMS - Weebly&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Libraries - Hammer.js&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;WebFrameworks - Bootstrap&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Ads - VigLink&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Frameworks - React&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Libraries - script.aculo.us&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CMS - Rocket&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Libraries - FancyBox&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;PHP&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CMS - Squarespace&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Libraries - Fingerprintjs&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;ReCAPTCHA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CMS - Wix&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Libraries - jQuery&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;WebFrameworks - CodeIgniter&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Frameworks - Angular&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Libraries - jQuery UI&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;WebFrameworks - Microsoft ASP.NET&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CMS - Drupal&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Google Maps&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Libraries - Underscore.js&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Ads - Yandex.Direct&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Frameworks - RequireJS&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Libraries - Select2&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Ads - AppNexus&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Frameworks - Knockout.js&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Libraries - Lodash&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CMS - TYPO3 CMS&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Libraries - Flickity&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;WebFrameworks - animate.css&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CMS - Elementor&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Java&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Libraries - YUI&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Ads - Criteo&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Frameworks - MooTools&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Libraries - Modernizr&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='errors_from_alerts_analysis' inline='true' name='federated.0r2kfbl0fh1cq01cr7j031jgmzx5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='errors_from_alerts_analysis' name='textscan.0auckcr06weirs17o5h0608opxh8'>
+            <connection class='textscan' directory='C:/Users/mckla/Documents/GitHub/WebAIM-Data/Final_Analysis' filename=' errors_from_alerts_analysis.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0auckcr06weirs17o5h0608opxh8' name=' errors_from_alerts_analysis.csv' table='[ errors_from_alerts_analysis#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Error' ordinal='1' />
+            <column datatype='string' name='Alert' ordinal='2' />
+            <column datatype='real' name='Value' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ errors_from_alerts_analysis.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[ errors_from_alerts_analysis.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Error</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Error]</local-name>
+            <parent-name>[ errors_from_alerts_analysis.csv]</parent-name>
+            <remote-alias>Error</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Alert</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Alert]</local-name>
+            <parent-name>[ errors_from_alerts_analysis.csv]</parent-name>
+            <remote-alias>Alert</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Value]</local-name>
+            <parent-name>[ errors_from_alerts_analysis.csv]</parent-name>
+            <remote-alias>Value</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.484759' measure-ordering='alphabetic' measure-percentage='0.515241' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='alerts_tech_analysis' inline='true' name='federated.167oky51efnnk1174ppwb0pcq3wv' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='alerts_tech_analysis' name='textscan.02al4e40tuf6uh1bcbocd0rk7qdw'>
+            <connection class='textscan' directory='C:/Users/mckla/Documents/GitHub/WebAIM-Data/Final_Analysis' filename=' alerts_tech_analysis.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.02al4e40tuf6uh1bcbocd0rk7qdw' name=' alerts_tech_analysis.csv' table='[ alerts_tech_analysis#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Technologies' ordinal='1' />
+            <column datatype='string' name='Alert Type' ordinal='2' />
+            <column datatype='real' name='Value' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ alerts_tech_analysis.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[ alerts_tech_analysis.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Technologies</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Technologies]</local-name>
+            <parent-name>[ alerts_tech_analysis.csv]</parent-name>
+            <remote-alias>Technologies</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Alert Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Alert Type]</local-name>
+            <parent-name>[ alerts_tech_analysis.csv]</parent-name>
+            <remote-alias>Alert Type</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Value]</local-name>
+            <parent-name>[ alerts_tech_analysis.csv]</parent-name>
+            <remote-alias>Value</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[Technologies]' role='dimension' type='nominal' />
+      <column-instance column='[Technologies]' derivation='None' name='[none:Technologies:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.484787' measure-ordering='alphabetic' measure-percentage='0.515213' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Technologies:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;CMS - 1C-Bitrix&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Frameworks - TweenMax&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Libraries - Slick&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ads - AdRoll&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Frameworks - Backbone.js&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Libraries - Lazy.js&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;WebFrameworks - ZURB Foundation&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Ads - DoubleClick&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Frameworks - Mustache&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Libraries - Moment.js&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CMS - Joomla&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Libraries - Dojo&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Libraries - Zepto&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CMS - Blogger&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Frameworks - Vue.js&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Libraries - SoundManager&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Ads - Prebid&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Frameworks - Prototype&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Libraries - prettyPhoto&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CMS - WordPress&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Libraries - jQuery Migrate&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;WebFrameworks - Laravel&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Ads - AdSense&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Frameworks - Handlebars&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Libraries - Lightbox&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CMS - Weebly&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Libraries - Hammer.js&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;WebFrameworks - Bootstrap&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Ads - VigLink&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Frameworks - React&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Libraries - script.aculo.us&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CMS - Rocket&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Libraries - FancyBox&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;PHP&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CMS - Squarespace&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Libraries - Fingerprintjs&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;ReCAPTCHA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CMS - Wix&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Libraries - jQuery&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;WebFrameworks - CodeIgniter&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Frameworks - Angular&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Libraries - jQuery UI&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;WebFrameworks - Microsoft ASP.NET&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CMS - Drupal&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Google Maps&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Libraries - Underscore.js&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Ads - Yandex.Direct&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Frameworks - RequireJS&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Libraries - Select2&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Ads - AppNexus&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Frameworks - Knockout.js&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Libraries - Lodash&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CMS - TYPO3 CMS&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Libraries - Flickity&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;WebFrameworks - animate.css&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CMS - Elementor&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Java&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Libraries - YUI&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Ads - Criteo&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Frameworks - MooTools&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Libraries - Modernizr&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='features_tech_analysis' inline='true' name='federated.0wd897e1amxnjg14msn9v1ly1wu6' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='features_tech_analysis' name='textscan.03hgq4w16g38yb19nasoj1dpyvr3'>
+            <connection class='textscan' directory='C:/Users/mckla/Documents/GitHub/WebAIM-Data/Final_Analysis' filename=' features_tech_analysis.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.03hgq4w16g38yb19nasoj1dpyvr3' name=' features_tech_analysis.csv' table='[ features_tech_analysis#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Technologies' ordinal='1' />
+            <column datatype='string' name='Feature Type' ordinal='2' />
+            <column datatype='real' name='Value' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ features_tech_analysis.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[ features_tech_analysis.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Technologies</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Technologies]</local-name>
+            <parent-name>[ features_tech_analysis.csv]</parent-name>
+            <remote-alias>Technologies</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Feature Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Feature Type]</local-name>
+            <parent-name>[ features_tech_analysis.csv]</parent-name>
+            <remote-alias>Feature Type</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Value]</local-name>
+            <parent-name>[ features_tech_analysis.csv]</parent-name>
+            <remote-alias>Value</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[Technologies]' role='dimension' type='nominal' />
+      <column-instance column='[Technologies]' derivation='None' name='[none:Technologies:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.484787' measure-ordering='alphabetic' measure-percentage='0.515213' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Technologies:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;CMS - 1C-Bitrix&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Frameworks - TweenMax&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Libraries - Slick&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ads - AdRoll&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Frameworks - Backbone.js&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Libraries - Lazy.js&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;WebFrameworks - ZURB Foundation&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Ads - DoubleClick&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Frameworks - Mustache&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Libraries - Moment.js&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CMS - Joomla&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Libraries - Dojo&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Libraries - Zepto&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;CMS - Blogger&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Frameworks - Vue.js&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Libraries - SoundManager&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Ads - Prebid&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Frameworks - Prototype&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Libraries - prettyPhoto&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;CMS - WordPress&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Libraries - jQuery Migrate&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;WebFrameworks - Laravel&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Ads - AdSense&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Frameworks - Handlebars&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Libraries - Lightbox&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;CMS - Weebly&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Libraries - Hammer.js&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;WebFrameworks - Bootstrap&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Ads - VigLink&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Frameworks - React&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Libraries - script.aculo.us&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CMS - Rocket&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Libraries - FancyBox&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;PHP&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CMS - Squarespace&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Libraries - Fingerprintjs&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;ReCAPTCHA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CMS - Wix&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Libraries - jQuery&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;WebFrameworks - CodeIgniter&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Frameworks - Angular&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Libraries - jQuery UI&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;WebFrameworks - Microsoft ASP.NET&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;CMS - Drupal&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Google Maps&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Libraries - Underscore.js&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Ads - Yandex.Direct&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Frameworks - RequireJS&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Libraries - Select2&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Ads - AppNexus&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Frameworks - Knockout.js&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Libraries - Lodash&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CMS - TYPO3 CMS&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Libraries - Flickity&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;WebFrameworks - animate.css&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;CMS - Elementor&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Java&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Libraries - YUI&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Ads - Criteo&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Frameworks - MooTools&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Libraries - Modernizr&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Ads'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='technologies_by_errors' name='federated.0zwgwts0gr8itr11mx7ed1d4bvwd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zwgwts0gr8itr11mx7ed1d4bvwd'>
+            <column caption='Top' datatype='integer' name='[Calculation_421086615458598912]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='index()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Error Type]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Technologies]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Value]' role='measure' type='quantitative' />
+            <column-instance column='[Technologies]' derivation='Count' name='[cnt:Technologies:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Error Type]' derivation='None' name='[none:Error Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Technologies]' derivation='None' name='[none:Technologies:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Value]' derivation='Sum' name='[sum:Value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_421086615458598912]' derivation='User' name='[usr:Calculation_421086615458598912:ok:14]' pivot='key' type='ordinal'>
+              <table-calc level-break='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' ordering-type='Field'>
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Technologies]' />
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' />
+                <sort direction='DESC' using='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' />
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Calculation_421086615458598912]' derivation='User' name='[usr:Calculation_421086615458598912:qk:4]' pivot='key' type='quantitative'>
+              <table-calc level-break='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' ordering-type='Field'>
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Technologies]' />
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' />
+                <sort direction='DESC' using='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' />
+              </table-calc>
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Ads - AdRoll&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Ads - AdSense&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Ads - AppNexus&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Ads - Criteo&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Ads - DoubleClick&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Ads - Prebid&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Ads - VigLink&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Ads - Yandex.Direct&quot;' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' direction='ASC' using='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[cnt:Technologies:qk]' />
+          <filter class='quantitative' column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:qk:4]' included-values='in-range'>
+            <min>1</min>
+            <max>5</max>
+          </filter>
+          <slices>
+            <column>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:qk:4]</column>
+            <column>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' value='172' />
+            <format attr='width' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:ok:14]' value='68' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' num-steps='5' palette='orange_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk] / ([federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:ok:14] / [federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Error Type:nk]))</rows>
+        <cols>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]</cols>
+      </table>
+      <simple-id uuid='{ADBFF281-DA03-4792-AACF-FDAE02C69C24}' />
+    </worksheet>
+    <worksheet name='CMS'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='technologies_by_errors' name='federated.0zwgwts0gr8itr11mx7ed1d4bvwd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zwgwts0gr8itr11mx7ed1d4bvwd'>
+            <column caption='Top' datatype='integer' name='[Calculation_421086615458598912]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='index()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Error Type]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Technologies]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Value]' role='measure' type='quantitative' />
+            <column-instance column='[Error Type]' derivation='None' name='[none:Error Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Technologies]' derivation='None' name='[none:Technologies:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Value]' derivation='Sum' name='[sum:Value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_421086615458598912]' derivation='User' name='[usr:Calculation_421086615458598912:ok:14]' pivot='key' type='ordinal'>
+              <table-calc level-break='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' ordering-type='Field'>
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Technologies]' />
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' />
+                <sort direction='DESC' using='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' />
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Calculation_421086615458598912]' derivation='User' name='[usr:Calculation_421086615458598912:qk:4]' pivot='key' type='quantitative'>
+              <table-calc level-break='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' ordering-type='Field'>
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Technologies]' />
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' />
+                <sort direction='DESC' using='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' />
+              </table-calc>
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;CMS - 1C-Bitrix&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;CMS - Blogger&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;CMS - Drupal&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;CMS - Elementor&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;CMS - Joomla&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;CMS - Rocket&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;CMS - Squarespace&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;CMS - TYPO3 CMS&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;CMS - Weebly&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;CMS - Wix&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;CMS - WordPress&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:qk:4]' included-values='in-range'>
+            <min>1</min>
+            <max>5</max>
+          </filter>
+          <slices>
+            <column>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:qk:4]</column>
+            <column>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' value='144' />
+            <format attr='width' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:ok:14]' value='44' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' num-steps='5' palette='orange_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk] / ([federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:ok:14] / [federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Error Type:nk]))</rows>
+        <cols>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]</cols>
+      </table>
+      <simple-id uuid='{47E0EE66-3F4F-4C57-838D-C72D2CDCDFCB}' />
+    </worksheet>
+    <worksheet name='Comparison of Alerts'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='alerts_tech_analysis' name='federated.167oky51efnnk1174ppwb0pcq3wv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.167oky51efnnk1174ppwb0pcq3wv'>
+            <column datatype='string' name='[Alert Type]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Technologies]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Value]' role='measure' type='quantitative' />
+            <column-instance column='[Alert Type]' derivation='None' name='[none:Alert Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Technologies]' derivation='None' name='[none:Technologies:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Value]' derivation='Sum' name='[sum:Value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.167oky51efnnk1174ppwb0pcq3wv].[none:Alert Type:nk]' direction='DESC' using='[federated.167oky51efnnk1174ppwb0pcq3wv].[sum:Value:qk]' />
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.167oky51efnnk1174ppwb0pcq3wv].[none:Technologies:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.167oky51efnnk1174ppwb0pcq3wv].[sum:Value:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.167oky51efnnk1174ppwb0pcq3wv].[none:Technologies:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.167oky51efnnk1174ppwb0pcq3wv].[none:Alert Type:nk] / [federated.167oky51efnnk1174ppwb0pcq3wv].[none:Technologies:nk])</rows>
+        <cols>[federated.167oky51efnnk1174ppwb0pcq3wv].[sum:Value:qk]</cols>
+      </table>
+      <simple-id uuid='{214C3845-15B9-43AB-ADD5-B34DF4882A9C}' />
+    </worksheet>
+    <worksheet name='Comparison of Errors'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='technologies_by_errors' name='federated.0zwgwts0gr8itr11mx7ed1d4bvwd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zwgwts0gr8itr11mx7ed1d4bvwd'>
+            <column caption='Top' datatype='integer' name='[Calculation_421086615458598912]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='index()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Error Type]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Technologies]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Value]' role='measure' type='quantitative' />
+            <column-instance column='[Error Type]' derivation='None' name='[none:Error Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Technologies]' derivation='None' name='[none:Technologies:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Value]' derivation='Sum' name='[sum:Value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_421086615458598912]' derivation='User' name='[usr:Calculation_421086615458598912:ok]' pivot='key' type='ordinal'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+          </datasource-dependencies>
+          <computed-sort column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Error Type:nk]' direction='DESC' using='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' />
+          <filter class='quantitative' column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' included-values='in-range'>
+            <min>0.5</min>
+            <max>126.56909033679572</max>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' value='172' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' num-steps='5' palette='orange_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' />
+              <lod column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Error Type:nk] / [federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk])</rows>
+        <cols>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]</cols>
+      </table>
+      <simple-id uuid='{44F3E476-5862-437A-A100-374DC050C842}' />
+    </worksheet>
+    <worksheet name='Comparison of Features'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='features_tech_analysis' name='federated.0wd897e1amxnjg14msn9v1ly1wu6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0wd897e1amxnjg14msn9v1ly1wu6'>
+            <column datatype='string' name='[Feature Type]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Technologies]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Value]' role='measure' type='quantitative' />
+            <column-instance column='[Feature Type]' derivation='None' name='[none:Feature Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Technologies]' derivation='None' name='[none:Technologies:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Value]' derivation='Sum' name='[sum:Value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0wd897e1amxnjg14msn9v1ly1wu6].[none:Feature Type:nk]' direction='DESC' using='[federated.0wd897e1amxnjg14msn9v1ly1wu6].[sum:Value:qk]' />
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0wd897e1amxnjg14msn9v1ly1wu6].[none:Technologies:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0wd897e1amxnjg14msn9v1ly1wu6].[sum:Value:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0wd897e1amxnjg14msn9v1ly1wu6].[none:Technologies:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0wd897e1amxnjg14msn9v1ly1wu6].[none:Feature Type:nk] / [federated.0wd897e1amxnjg14msn9v1ly1wu6].[none:Technologies:nk])</rows>
+        <cols>[federated.0wd897e1amxnjg14msn9v1ly1wu6].[sum:Value:qk]</cols>
+      </table>
+      <simple-id uuid='{8F50759E-306D-4599-BDEA-22267742D6DC}' />
+    </worksheet>
+    <worksheet name='Frameworks'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='technologies_by_errors' name='federated.0zwgwts0gr8itr11mx7ed1d4bvwd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zwgwts0gr8itr11mx7ed1d4bvwd'>
+            <column caption='Top' datatype='integer' name='[Calculation_421086615458598912]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='index()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Error Type]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Technologies]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Value]' role='measure' type='quantitative' />
+            <column-instance column='[Error Type]' derivation='None' name='[none:Error Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Technologies]' derivation='None' name='[none:Technologies:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Value]' derivation='Sum' name='[sum:Value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_421086615458598912]' derivation='User' name='[usr:Calculation_421086615458598912:ok:14]' pivot='key' type='ordinal'>
+              <table-calc level-break='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' ordering-type='Field'>
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Technologies]' />
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' />
+                <sort direction='DESC' using='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' />
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Calculation_421086615458598912]' derivation='User' name='[usr:Calculation_421086615458598912:qk:4]' pivot='key' type='quantitative'>
+              <table-calc level-break='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' ordering-type='Field'>
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Technologies]' />
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' />
+                <sort direction='DESC' using='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' />
+              </table-calc>
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Frameworks - Angular&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Frameworks - Backbone.js&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Frameworks - Handlebars&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Frameworks - Knockout.js&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Frameworks - MooTools&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Frameworks - Mustache&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Frameworks - Prototype&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Frameworks - React&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Frameworks - RequireJS&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Frameworks - TweenMax&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Frameworks - Vue.js&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:qk:4]' included-values='in-range'>
+            <min>1</min>
+            <max>5</max>
+          </filter>
+          <slices>
+            <column>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:qk:4]</column>
+            <column>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' value='152' />
+            <format attr='width' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:ok:14]' value='44' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' num-steps='5' palette='orange_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk] / ([federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:ok:14] / [federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Error Type:nk]))</rows>
+        <cols>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]</cols>
+      </table>
+      <simple-id uuid='{2443F23E-AE11-48E0-943F-101EC94988F9}' />
+    </worksheet>
+    <worksheet name='Libraries'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='technologies_by_errors' name='federated.0zwgwts0gr8itr11mx7ed1d4bvwd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zwgwts0gr8itr11mx7ed1d4bvwd'>
+            <column caption='Top' datatype='integer' name='[Calculation_421086615458598912]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='index()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Error Type]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Technologies]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Value]' role='measure' type='quantitative' />
+            <column-instance column='[Error Type]' derivation='None' name='[none:Error Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Technologies]' derivation='None' name='[none:Technologies:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Value]' derivation='Sum' name='[sum:Value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_421086615458598912]' derivation='User' name='[usr:Calculation_421086615458598912:ok:14]' pivot='key' type='ordinal'>
+              <table-calc level-break='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' ordering-type='Field'>
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Technologies]' />
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' />
+                <sort direction='DESC' using='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' />
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Calculation_421086615458598912]' derivation='User' name='[usr:Calculation_421086615458598912:qk:4]' pivot='key' type='quantitative'>
+              <table-calc level-break='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' ordering-type='Field'>
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Technologies]' />
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' />
+                <sort direction='DESC' using='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' />
+              </table-calc>
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - Dojo&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - FancyBox&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - Fingerprintjs&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - Flickity&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - Hammer.js&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - jQuery&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - jQuery Migrate&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - jQuery UI&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - Lazy.js&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - Lightbox&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - Lodash&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - Modernizr&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - Moment.js&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - prettyPhoto&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - script.aculo.us&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - Select2&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - Slick&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - SoundManager&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - Underscore.js&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - YUI&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;Libraries - Zepto&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:qk:4]' included-values='in-range'>
+            <min>1</min>
+            <max>5</max>
+          </filter>
+          <slices>
+            <column>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:qk:4]</column>
+            <column>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' value='124' />
+            <format attr='width' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:ok:14]' value='48' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' num-steps='5' palette='orange_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk] / ([federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:ok:14] / [federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Error Type:nk]))</rows>
+        <cols>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]</cols>
+      </table>
+      <simple-id uuid='{5622C89A-401E-4DB5-AE12-9141FD7FBC99}' />
+    </worksheet>
+    <worksheet name='WebFrameworks'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='technologies_by_errors' name='federated.0zwgwts0gr8itr11mx7ed1d4bvwd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zwgwts0gr8itr11mx7ed1d4bvwd'>
+            <column caption='Top' datatype='integer' name='[Calculation_421086615458598912]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='index()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Error Type]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Technologies]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Value]' role='measure' type='quantitative' />
+            <column-instance column='[Error Type]' derivation='None' name='[none:Error Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Technologies]' derivation='None' name='[none:Technologies:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Value]' derivation='Sum' name='[sum:Value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_421086615458598912]' derivation='User' name='[usr:Calculation_421086615458598912:ok:14]' pivot='key' type='ordinal'>
+              <table-calc level-break='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' ordering-type='Field'>
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Technologies]' />
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' />
+                <sort direction='DESC' using='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' />
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Calculation_421086615458598912]' derivation='User' name='[usr:Calculation_421086615458598912:qk:4]' pivot='key' type='quantitative'>
+              <table-calc level-break='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' ordering-type='Field'>
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Technologies]' />
+                <order field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[Error Type]' />
+                <sort direction='DESC' using='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' />
+              </table-calc>
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;WebFrameworks - animate.css&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;WebFrameworks - Bootstrap&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;WebFrameworks - CodeIgniter&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;WebFrameworks - Laravel&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;WebFrameworks - Microsoft ASP.NET&quot;' />
+              <groupfilter function='member' level='[none:Technologies:nk]' member='&quot;WebFrameworks - ZURB Foundation&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:qk:4]' included-values='in-range'>
+            <min>1</min>
+            <max>5</max>
+          </filter>
+          <slices>
+            <column>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:qk:4]</column>
+            <column>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' value='152' />
+            <format attr='width' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:ok:14]' value='44' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]' num-steps='5' palette='orange_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk] / ([federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk] / ([federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[usr:Calculation_421086615458598912:ok:14] / [federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Error Type:nk])))</rows>
+        <cols>[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[sum:Value:qk]</cols>
+      </table>
+      <simple-id uuid='{EFEEE214-A945-4A07-B9D3-3925A0CA19A3}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Ads - Dash'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#666666' fontsize='20'>Ads</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='1200' maxwidth='1900' minheight='1200' minwidth='1900' preset-index='18' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='16' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98666' id='29' param='horz' type='layout-flow' w='99158' x='421' y='667'>
+            <zone h='98666' id='22' param='vert' type='layout-flow' w='99158' x='421' y='667'>
+              <zone h='98653' id='27' name='Ads' w='99158' x='421' y='667'>
+                <layout-cache cell-count-h='40' minwidth='502' non-cell-size-h='148' type-h='cell' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='5125' id='3' type='dashboard-object' w='11700' x='86300' y='2375'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{0069FB92-B54B-4B36-8276-5E18DA625763}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Back</caption>
+              <format attr='background-color' value='#e9f3f2' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='border-color' value='#4e79a7' />
+            </button-visual-state>
+          </button>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#666666' fontsize='20'>Ads</run>
+                <run fontalignment='1'>Æ&#10;</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='34' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98666' id='35' param='vert' type='layout-flow' w='99158' x='421' y='667'>
+                <zone fixed-size='280' h='98653' id='27' is-fixed='true' name='Ads' w='99158' x='421' y='667'>
+                  <layout-cache cell-count-h='40' minwidth='502' non-cell-size-h='148' type-h='cell' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5125' id='3' type='dashboard-object' w='11700' x='86300' y='2375'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{0069FB92-B54B-4B36-8276-5E18DA625763}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Back</caption>
+                      <format attr='background-color' value='#e9f3f2' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='border-color' value='#4e79a7' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D15A4C9C-6FFB-4BA7-88E2-8D8989551CF3}' />
+    </dashboard>
+    <dashboard name='Breakdown_by_Tech'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#666666' fontsize='20'>TOP 5 ERRORS BY TECHNOLOGY GROUP</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='968' maxwidth='1766' minheight='968' minwidth='1766' preset-index='18' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='34' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98348' id='43' param='horz' type='layout-flow' w='99094' x='453' y='826'>
+            <zone h='98348' id='40' param='horz' type='layout-flow' w='99094' x='453' y='826'>
+              <zone h='98348' id='37' param='horz' type='layout-flow' w='99094' x='453' y='826'>
+                <zone h='98348' id='35' type='layout-basic' w='99094' x='453' y='826' />
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='15083' id='3' type='dashboard-object' w='30578' x='1586' y='13843'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{53B6F1AA-4EEC-4909-9E42-E6B55F959699}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Ads</caption>
+              <format attr='background-color' value='#e9f3f2' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='border-color' value='#4e79a7' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='14669' id='12' type='dashboard-object' w='30521' x='1699' y='30579'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{F9B20E15-3481-443F-8126-9E99BD4EBC20}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>CMS</caption>
+              <format attr='background-color' value='#f2f2f2' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='border-color' value='#69aaa5' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='14256' id='13' type='dashboard-object' w='30294' x='1925' y='46694'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{EBBA378B-D4B5-4533-A76C-C2B006403EBC}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Frameworks</caption>
+              <format attr='background-color' value='#eff3e3' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='border-color' value='#d3b348' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='14153' id='14' type='dashboard-object' w='29955' x='2208' y='62913'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{8160B205-990A-446E-90C7-43EE5C3C794E}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Libraries</caption>
+              <format attr='background-color' value='#e9f3f2' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='border-color' value='#c290b4' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='13946' id='15' type='dashboard-object' w='30011' x='2208' y='78616'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{B0B5FEF1-B30A-4E4D-A8C3-B95B04F9D8EC}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Web Frameworks</caption>
+              <format attr='background-color' value='#f5ead7' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='border-color' value='#72b966' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone fixed-size='127' forceUpdate='true' h='11157' id='38' is-fixed='true' type='text' w='31767' x='3341' y='1550'>
+          <formatted-text>
+            <run fontalignment='1' fontsize='18'>Errors by Technology Group</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='10640' id='41' type='text' w='28256' x='36523' y='2376'>
+          <formatted-text>
+            <run fontalignment='1' fontsize='18'>Alerts by Technology Group</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='11157' id='44' type='text' w='30011' x='68573' y='1756'>
+          <formatted-text>
+            <run fontalignment='1' fontsize='18'>Features by Technology Group</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#666666' fontsize='20'>TOP 5 ERRORS BY TECHNOLOGY GROUP</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='45' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98348' id='46' param='vert' type='layout-flow' w='99094' x='453' y='826'>
+                <zone fixed-size='127' forceUpdate='true' h='11157' id='38' type='text' w='31767' x='3341' y='1550'>
+                  <formatted-text>
+                    <run fontalignment='1' fontsize='18'>Errors by Technology Group</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='11157' id='44' type='text' w='30011' x='68573' y='1756'>
+                  <formatted-text>
+                    <run fontalignment='1' fontsize='18'>Features by Technology Group</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='10640' id='41' type='text' w='28256' x='36523' y='2376'>
+                  <formatted-text>
+                    <run fontalignment='1' fontsize='18'>Alerts by Technology Group</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='15083' id='3' type='dashboard-object' w='30578' x='1586' y='13843'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{53B6F1AA-4EEC-4909-9E42-E6B55F959699}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Ads</caption>
+                      <format attr='background-color' value='#e9f3f2' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='border-color' value='#4e79a7' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14669' id='12' type='dashboard-object' w='30521' x='1699' y='30579'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{F9B20E15-3481-443F-8126-9E99BD4EBC20}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>CMS</caption>
+                      <format attr='background-color' value='#f2f2f2' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='border-color' value='#69aaa5' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14256' id='13' type='dashboard-object' w='30294' x='1925' y='46694'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{EBBA378B-D4B5-4533-A76C-C2B006403EBC}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Frameworks</caption>
+                      <format attr='background-color' value='#eff3e3' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='border-color' value='#d3b348' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14153' id='14' type='dashboard-object' w='29955' x='2208' y='62913'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{8160B205-990A-446E-90C7-43EE5C3C794E}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Libraries</caption>
+                      <format attr='background-color' value='#e9f3f2' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='border-color' value='#c290b4' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13946' id='15' type='dashboard-object' w='30011' x='2208' y='78616'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{B0B5FEF1-B30A-4E4D-A8C3-B95B04F9D8EC}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Web Frameworks</caption>
+                      <format attr='background-color' value='#f5ead7' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='border-color' value='#72b966' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D7D6489C-BF24-446F-A23D-76A5216F34C1}' />
+    </dashboard>
+    <dashboard name='CMS - Dash'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#666666' fontsize='20'>Ads</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='1200' maxwidth='1900' minheight='1200' minwidth='1900' preset-index='18' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='27' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='30' param='horz' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='100000' id='28' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='100000' id='26' name='CMS' w='100000' x='0' y='0'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+        </zone>
+        <zone h='5125' id='3' type='dashboard-object' w='11700' x='86300' y='2375'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{0069FB92-B54B-4B36-8276-5E18DA625763}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Back</caption>
+              <format attr='background-color' value='#e9f3f2' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='border-color' value='#4e79a7' />
+            </button-visual-state>
+          </button>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#666666' fontsize='20'>Ads</run>
+                <run fontalignment='1'>Æ&#10;</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='35' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98666' id='36' param='vert' type='layout-flow' w='99158' x='421' y='667'>
+                <zone fixed-size='280' h='100000' id='26' is-fixed='true' name='CMS' w='100000' x='0' y='0'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5125' id='3' type='dashboard-object' w='11700' x='86300' y='2375'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{0069FB92-B54B-4B36-8276-5E18DA625763}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Back</caption>
+                      <format attr='background-color' value='#e9f3f2' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='border-color' value='#4e79a7' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{03FFB0A9-EED4-4AE8-8651-48C993B5BF1D}' />
+    </dashboard>
+    <dashboard name='Frameworks - Dash'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#666666' fontsize='20'>Ads</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='1200' maxwidth='1900' minheight='1200' minwidth='1900' preset-index='18' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='27' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='30' param='horz' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='100000' id='28' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='100000' id='26' name='Frameworks' w='100000' x='0' y='0'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+        </zone>
+        <zone h='5125' id='3' type='dashboard-object' w='11700' x='86300' y='2375'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{0069FB92-B54B-4B36-8276-5E18DA625763}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Back</caption>
+              <format attr='background-color' value='#e9f3f2' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='border-color' value='#4e79a7' />
+            </button-visual-state>
+          </button>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#666666' fontsize='20'>Ads</run>
+                <run fontalignment='1'>Æ&#10;</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='35' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98666' id='36' param='vert' type='layout-flow' w='99158' x='421' y='667'>
+                <zone fixed-size='280' h='100000' id='26' is-fixed='true' name='Frameworks' w='100000' x='0' y='0'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5125' id='3' type='dashboard-object' w='11700' x='86300' y='2375'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{0069FB92-B54B-4B36-8276-5E18DA625763}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Back</caption>
+                      <format attr='background-color' value='#e9f3f2' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='border-color' value='#4e79a7' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{7468A235-E034-4E6D-9FC6-16B9FE617818}' />
+    </dashboard>
+    <dashboard name='Full Analysis' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>WebAIM Million Analysis</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='story-description'>
+          <format attr='background-color' id='story-description_6' value='#e9f3f2d9' />
+        </style-rule>
+        <style-rule element='story-point-caption'>
+          <format attr='width' value='171' />
+        </style-rule>
+      </style>
+      <size maxheight='1168' maxwidth='1966' minheight='1168' minwidth='1966' preset-index='17' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98630' id='1' param='vert' removable='false' type='layout-flow' w='99186' x='407' y='685'>
+            <zone h='4281' id='3' type='title' w='99186' x='407' y='685' />
+            <zone fixed-size='120' h='10274' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='99186' x='407' y='4966' />
+            <zone h='84075' id='5' paired-zone-id='4' removable='false' type='flipboard' w='99186' x='407' y='15240'>
+              <flipboard active-id='5' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Introduction' captured-sheet='' id='3' />
+                  <story-point caption='Breakdown by Tech Group' captured-sheet='Breakdown_by_Tech' id='2' />
+                  <story-point caption='Comparison of Errors' captured-sheet='Comparison of Errors' id='4' />
+                  <story-point caption='Comparison of Alerts' captured-sheet='Comparison of Alerts' id='5' />
+                  <story-point caption='Comparison of Features' captured-sheet='Comparison of Features' id='6' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone flipboard-zone-id='5' forceUpdate='true' h='75599' hidden='true' id='6' story-point-id='3' type='text' w='81485' x='9461' y='14469'>
+          <formatted-text>
+            <run fontsize='28'>Æ </run>
+            <run fontsize='22'>BIG Group - Fall 2019</run>
+            <run>&#10;&#10;&#10;Brandon Dent | Daniel Ludwig | Earl Carlisle&#10;McKlayne Marshall | Montana Cragun | Suyash Mhetre | Tyler Himes | Wesley Geddes</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <simple-id uuid='{B1FD16A5-D8EB-49E5-8567-D42D9C5593AC}' />
+    </dashboard>
+    <dashboard name='Libraries - Dash'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#666666' fontsize='20'>Ads</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='1200' maxwidth='1900' minheight='1200' minwidth='1900' preset-index='18' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='27' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='30' param='horz' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='100000' id='28' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='100000' id='26' name='Libraries' w='100000' x='0' y='0'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+        </zone>
+        <zone h='5125' id='3' type='dashboard-object' w='11700' x='86300' y='2375'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{0069FB92-B54B-4B36-8276-5E18DA625763}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Back</caption>
+              <format attr='background-color' value='#e9f3f2' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='border-color' value='#4e79a7' />
+            </button-visual-state>
+          </button>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#666666' fontsize='20'>Ads</run>
+                <run fontalignment='1'>Æ&#10;</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='35' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98666' id='36' param='vert' type='layout-flow' w='99158' x='421' y='667'>
+                <zone fixed-size='280' h='100000' id='26' is-fixed='true' name='Libraries' w='100000' x='0' y='0'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5125' id='3' type='dashboard-object' w='11700' x='86300' y='2375'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{0069FB92-B54B-4B36-8276-5E18DA625763}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Back</caption>
+                      <format attr='background-color' value='#e9f3f2' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='border-color' value='#4e79a7' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{771E607D-3F58-42DA-BEED-F5BCADF7B07F}' />
+    </dashboard>
+    <dashboard name='WebFrameworks - Dash'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#666666' fontsize='20'>Ads</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='1200' maxwidth='1900' minheight='1200' minwidth='1900' preset-index='18' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='27' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='30' param='horz' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='100000' id='28' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='100000' id='26' name='WebFrameworks' w='100000' x='0' y='0'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+        </zone>
+        <zone h='5125' id='3' type='dashboard-object' w='11700' x='86300' y='2375'>
+          <button action='tabdoc:goto-sheet window-id=&quot;{0069FB92-B54B-4B36-8276-5E18DA625763}&quot;' button-type='text'>
+            <button-visual-state>
+              <caption>Back</caption>
+              <format attr='background-color' value='#e9f3f2' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='border-color' value='#4e79a7' />
+            </button-visual-state>
+          </button>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontalignment='1' fontcolor='#666666' fontsize='20'>Ads</run>
+                <run fontalignment='1'>Æ&#10;</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='35' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98666' id='36' param='vert' type='layout-flow' w='99158' x='421' y='667'>
+                <zone fixed-size='280' h='100000' id='26' is-fixed='true' name='WebFrameworks' w='100000' x='0' y='0'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5125' id='3' type='dashboard-object' w='11700' x='86300' y='2375'>
+                  <button action='tabdoc:goto-sheet window-id=&quot;{0069FB92-B54B-4B36-8276-5E18DA625763}&quot;' button-type='text'>
+                    <button-visual-state>
+                      <caption>Back</caption>
+                      <format attr='background-color' value='#e9f3f2' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='border-color' value='#4e79a7' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{8D33CE32-9631-4A14-AE5F-4613B1646461}' />
+    </dashboard>
+  </dashboards>
+  <windows pres-mode='true' saved-dpi-scale-factor='1.5' source-height='137'>
+    <window class='dashboard' maximized='true' name='Full Analysis'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{76E2C89E-6F76-4376-BFED-F2A2BB7B99D0}' />
+    </window>
+    <window class='dashboard' name='Breakdown_by_Tech'>
+      <viewpoints />
+      <active id='15' />
+      <simple-id uuid='{0069FB92-B54B-4B36-8276-5E18DA625763}' />
+    </window>
+    <window class='worksheet' name='Comparison of Errors'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AD57C815-63DF-4867-9E42-505E525CCDD4}' />
+    </window>
+    <window class='worksheet' name='Comparison of Alerts'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.167oky51efnnk1174ppwb0pcq3wv].[none:Technologies:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{69B51E69-94DA-4EE5-A755-1812D05EFC07}' />
+    </window>
+    <window class='worksheet' name='Comparison of Features'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0wd897e1amxnjg14msn9v1ly1wu6].[none:Technologies:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{15903530-327F-4851-8CA8-0F632A5A5163}' />
+    </window>
+    <window class='worksheet' name='Ads'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-height' />
+      </viewpoint>
+      <simple-id uuid='{1006CA56-4D54-4483-8BCB-D6C48E0024BA}' />
+    </window>
+    <window class='worksheet' name='CMS'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-height' />
+      </viewpoint>
+      <simple-id uuid='{3DC76916-33BD-408D-897E-BDB221522DA5}' />
+    </window>
+    <window class='worksheet' name='Frameworks'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-height' />
+      </viewpoint>
+      <simple-id uuid='{569D97D6-43D3-4C5A-827D-002FE4689F63}' />
+    </window>
+    <window class='worksheet' name='Libraries'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E80B6A29-81CC-4B4A-8DD1-FDA0F47D76B0}' />
+    </window>
+    <window class='worksheet' name='WebFrameworks'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0zwgwts0gr8itr11mx7ed1d4bvwd].[none:Technologies:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-height' />
+      </viewpoint>
+      <simple-id uuid='{09CFC1DC-2094-4BA5-B1E9-7F97EEA9C7E3}' />
+    </window>
+    <window class='dashboard' name='Ads - Dash'>
+      <viewpoints>
+        <viewpoint name='Ads'>
+          <zoom type='fit-height' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{53B6F1AA-4EEC-4909-9E42-E6B55F959699}' />
+    </window>
+    <window class='dashboard' name='CMS - Dash'>
+      <viewpoints>
+        <viewpoint name='CMS' />
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{F9B20E15-3481-443F-8126-9E99BD4EBC20}' />
+    </window>
+    <window class='dashboard' name='Frameworks - Dash'>
+      <viewpoints>
+        <viewpoint name='Frameworks' />
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{EBBA378B-D4B5-4533-A76C-C2B006403EBC}' />
+    </window>
+    <window class='dashboard' name='Libraries - Dash'>
+      <viewpoints>
+        <viewpoint name='Libraries' />
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{8160B205-990A-446E-90C7-43EE5C3C794E}' />
+    </window>
+    <window class='dashboard' name='WebFrameworks - Dash'>
+      <viewpoints>
+        <viewpoint name='WebFrameworks'>
+          <zoom type='fit-height' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{B0B5FEF1-B30A-4E4D-A8C3-B95B04F9D8EC}' />
+    </window>
+  </windows>
+</workbook>
