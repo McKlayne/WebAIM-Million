@@ -23,13 +23,13 @@ https://webaim.org/projects/million/ with the follow-up (August)
 reanalysis summary at https://webaim.org/projects/million/update
 
 ### Some of the primary initial questions for me are:
-- How do technologies align with accessibility features?
-- How do technologies align with certain error types?
+- How do technologies align with accessibility features? - Answered
+- How do technologies align with certain error types? - Answered
 - Are there patterns or correlations of certain feature or alert types
-to increased errors or error types?
+to increased errors or error types? - Answered
 - How can I better visualize the data to find other patterns or
-correlations to explore further?
-- Are there patterns of change between the two datasets that I have overlooked?
+correlations to explore further? - Answered
+- Are there patterns of change between the two datasets that I have overlooked? - Next Semester
 
 ### Additional Questions:
 - Does one specific error cause any other errors to be more prevalent?
