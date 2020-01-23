@@ -1,4 +1,4 @@
-# WebAIM-Million
+# BIG Fall 2019 - WebAIM
 BIG Project in conjunction with WebAIM to analyze the technologies and accessibility errors on the top 1 million websites
 
 ### Team Members
