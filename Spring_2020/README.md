@@ -1,6 +1,16 @@
 # WebAIM-Million
 BIG Project in conjunction with WebAIM to analyze the technologies and accessibility errors on the top 1 million websites
 
+### Team Members
+- Brandon Dent
+- Casey Burgin
+- Earl Carlisle
+- Hadjer Bensaha
+- Jack DeSpain
+- Steven Driggs
+- Tyler Himes
+- McKlayne Marshall
+
 ### Data Sources
 Initial Million SQL - https://webaim.org/projects/million/MillionSQL.zip <br>
 Initial Million CSV - https://webaim.org/projects/million/MillionCSV.zip <br>
